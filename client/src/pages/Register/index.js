@@ -41,7 +41,7 @@ const Register = () => {
     >
       <div className="cards p-5">
         <div className="">
-          <h1>Movie_book</h1>
+          <h1>Register Details</h1>
         </div>
         <Form layout="vertical" onFinish={onFinish} className="m-2">
           <Form.Item

@@ -4,6 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { Loginuser } from "../../api/users";
 import { useDispatch } from "react-redux";
 import {ShowLoading,Hideloading} from "../../redux/loadersSlice"
+import school from "./school1.png"
+import logo from "../../../src/images.png";
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -35,14 +38,18 @@ const Login = () => {
   }, []);
 
   return (
-    <div
-      className="d-flex align-items-center justify-content-center flex-column bd-highlight mb-3  bg-info "
-      style={{ height: "100vh" }}
-    >
-      <div className="cards p-5">
-        <div className="">
-          <h1>Movie_book</h1>
-        </div>
+   
+<div className="container-custom mr-0 pr-0">
+      <div className="row m-0">
+        <div className="col-md-8">
+          <div className="row d-flex">
+            <div className="logo">
+              <img src={logo} className="imagelogo" />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12 d-flex flex-column justify-content-center align-items-center">
+              <div className="col-md-6">
         <Form layout="vertical" onFinish={onFinish} className="m-2">
           <Form.Item
             label="Email"
@@ -67,8 +74,22 @@ const Login = () => {
             <div className="text-success">Don't have an Account? Register</div>
           </Link>
         </Form>
+        </div>
+              
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4 col-sm-12 text-right pr-0 mt-4">
+          <br/><br/>
+          <img
+            src={school}
+            className="img-class"
+            alt="Responsive image"
+          />
+        </div>
       </div>
     </div>
+    
   );
 };
 
