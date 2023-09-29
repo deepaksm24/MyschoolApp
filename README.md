@@ -1,6 +1,6 @@
-# moviesbook
+# myschool
 MERN STACK PROJECT
-To Book movie tickets
+
 
 for admin
 username: admin@gmail.com
