@@ -52,37 +52,7 @@ function ProtecdRoute({ children }) {
   return (
     user && (
       <div>
-        <div className="p-5 container-fluid bg-dark text-white d-flex justify-content-between">
-          <div className="display-1 cursor-pointer"
-          onClick={()=>{
-            navigate("/");
-          }}
-          
-          >MOVIEbOOK</div>
-          <div className="d-inline-flex h-50 bg-white text-dark justify-content-between mt-4 p-1">
-            <AssignmentIndIcon fontSize="large" className="mt-2 mr-2" />
-            <div
-              className="display-6 mb-2 cursor-pointer"
-            
-              onClick={() => {
-                // console.log(user);
-                if (user.isAdmin === "true") {
-                  navigate("/admin");
-                } else {
-                  navigate("/profile");
-                }
-              }}
-            >
-              {user.name}
-            </div>
-            <LogoutIcon fontSize="large" className="mt-2 ml-4"
-            onClick={()=>{
-              localStorage.removeItem("token");
-              navigate("/login")
-            }}
-            />
-          </div>
-        </div>
+        
         <div className="content m-1 p-1">{children}</div>
       </div>
     )
